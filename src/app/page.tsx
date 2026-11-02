@@ -243,7 +243,21 @@ export default function Home() {
         <p>Beyond the Moon. Into the Future.</p>
         <small>© 2026 PlutoVsky. All rights reserved.</small>
       </footer>
-    </main>
+    
+<section id="buy" style={{textAlign:"center",padding:"80px 20px"}}>
+  <h2>Buy PlutoVsky</h2>
+  <p>Trade PlutoVsky on Pump.fun using your Solana wallet.</p>
+  <a
+    href="https://pump.fun/coin/9s2JZaeq2rqx2xPZE4UHmyT1EseQAQ82vYHh1EUsp9as"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="btn-primary"
+  >
+    🚀 Buy PlutoVsky on Pump.fun
+  </a>
+</section>
+
+</main>
   );
 }
 
