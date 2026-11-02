@@ -1,5 +1,4 @@
 ﻿"use client";
-import AirdropSection from "./AirdropSection";
 import { useState } from "react";
 import "./premium.css";
 
@@ -48,7 +47,7 @@ export default function Home() {
           <a href="#about">About</a>
           <a href="#tokenomics">Tokenomics</a>
           <a href="#trade">Trade</a>
-          <a href="#airdrop" className="airdrop-nav-btn">🚀 AIRDROP</a>
+          
         </div>
         <button className="wallet-btn" onClick={connectWallet}>
           {wallet
@@ -110,7 +109,7 @@ export default function Home() {
         </div>
       </section>
 
-      <AirdropSection />
+      
       <div className="ticker">
         <div className="ticker-content">
           ✦ PLUTOVSKY &nbsp; ✦ EXPLORE THE UNIVERSE &nbsp;
@@ -247,6 +246,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
