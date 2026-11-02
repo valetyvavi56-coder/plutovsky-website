@@ -68,6 +68,26 @@ export default function Home() {
             THE <span>STARS.</span>
           </h1>
 
+<div style={{ textAlign: "center", margin: "28px 0" }}>
+  <a
+    href="https://pump.fun/coin/9s2JZaeq2rqx2xPZE4UHmyT1EseQAQ82vYHh1EUsp9as"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="btn-primary"
+    style={{
+      display: "inline-block",
+      padding: "18px 38px",
+      fontSize: "19px",
+      fontWeight: 800,
+      borderRadius: "14px",
+      boxShadow: "0 0 35px rgba(110,90,255,.55)"
+    }}
+  >
+    🚀 BUY PLUTOVSKY ON PUMP.FUN
+  </a>
+</div>
+
+
           <p className="hero-subtitle">
             The future is not on Earth.
             <br />
