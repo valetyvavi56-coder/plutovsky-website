@@ -181,6 +181,46 @@ export default function Home() {
           </p>
         </div>
       </section>
+      <section id="chart" className="content-section">
+        <div className="section-heading">
+          <span className="section-kicker">02 / CRYPTO MARKETS</span>
+          <h2>Live Cryptocurrency Charts</h2>
+          <p>Explore Bitcoin, Solana, Ethereum and Litecoin market charts.</p>
+        </div>
+
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 350px), 1fr))",
+          gap: "24px"
+        }}>
+          {[
+            { name: "Bitcoin", symbol: "BTC", pair: "BINANCE:BTCUSDT" },
+            { name: "Solana", symbol: "SOL", pair: "BINANCE:SOLUSDT" },
+            { name: "Ethereum", symbol: "ETH", pair: "BINANCE:ETHUSDT" },
+            { name: "Litecoin", symbol: "LTC", pair: "BINANCE:LTCUSDT" }
+          ].map((coin) => (
+            <div key={coin.symbol} style={{
+              background: "#101935",
+              border: "1px solid rgba(255,255,255,0.15)",
+              borderRadius: "20px",
+              padding: "16px",
+              overflow: "hidden"
+            }}>
+              <h3 style={{ marginBottom: "16px" }}>
+                {coin.name} ({coin.symbol})
+              </h3>
+              <iframe
+                title={`${coin.name} Live Chart`}
+                src={`https://s.tradingview.com/widgetembed/?symbol=${encodeURIComponent(coin.pair)}&interval=60&theme=dark&style=1&timezone=Etc%2FUTC`}
+                width="100%"
+                height="360"
+                style={{ border: "none" }}
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
       <section id="tokenomics" className="content-section">
         <div className="section-heading">
           <span className="section-kicker">02 / THE NUMBERS</span>
@@ -242,6 +282,8 @@ export default function Home() {
     </main>
   );
 }
+
+
 
 
 
