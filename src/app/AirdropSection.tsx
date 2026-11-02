@@ -22,6 +22,10 @@ export default function AirdropSection() {
     setLoading(true);
 
     try {
+      if (!supabase) {
+        setMessage("Airdrop is temporarily unavailable.");
+        return;
+      }
       const { error } = await supabase
         .from("airdrop_public_requests")
         .insert({ wallet_address: address });
@@ -76,3 +80,4 @@ export default function AirdropSection() {
     </section>
   );
 }
+
