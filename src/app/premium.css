@@ -423,3 +423,23 @@
   .ai-section { padding: 65px 5%; }
   .ai-description { padding: 30px 22px; }
 }
+
+.nav-links .airdrop-nav-btn {
+  background: linear-gradient(135deg, #9945ff, #14f195);
+  color: #ffffff;
+  font-weight: 800;
+  padding: 11px 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 22px rgba(153,69,255,.45);
+  text-decoration: none;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.nav-links .airdrop-nav-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(20,241,149,.55);
+}
+
+#airdrop {
+  scroll-margin-top: 110px;
+}

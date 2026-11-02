@@ -1,5 +1,5 @@
 ﻿"use client";
-import CryptoChart from "./CryptoChart";
+import AirdropSection from "./AirdropSection";
 import { useState } from "react";
 import "./premium.css";
 
@@ -35,6 +35,8 @@ export default function Home() {
           <span className="brand-icon">✦</span> PLUTOVSKY
         </a>
         <div className="nav-links">
+        
+        
         <a
           href="https://x.com/plutovsky222"
           target="_blank"
@@ -46,6 +48,7 @@ export default function Home() {
           <a href="#about">About</a>
           <a href="#tokenomics">Tokenomics</a>
           <a href="#trade">Trade</a>
+          <a href="#airdrop" className="airdrop-nav-btn">🚀 AIRDROP</a>
         </div>
         <button className="wallet-btn" onClick={connectWallet}>
           {wallet
@@ -107,6 +110,7 @@ export default function Home() {
         </div>
       </section>
 
+      <AirdropSection />
       <div className="ticker">
         <div className="ticker-content">
           ✦ PLUTOVSKY &nbsp; ✦ EXPLORE THE UNIVERSE &nbsp;
@@ -181,39 +185,6 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <section id="chart" className="content-section">
-        <div className="section-heading">
-          <span className="section-kicker">02 / CRYPTO MARKETS</span>
-          <h2>Live Cryptocurrency Charts</h2>
-          <p>Explore Bitcoin, Solana, Ethereum and Litecoin market charts.</p>
-        </div>
-
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 350px), 1fr))",
-          gap: "24px"
-        }}>
-          {[
-            { name: "Bitcoin", symbol: "BTC", pair: "BINANCE:BTCUSDT" },
-            { name: "Solana", symbol: "SOL", pair: "BINANCE:SOLUSDT" },
-            { name: "Ethereum", symbol: "ETH", pair: "BINANCE:ETHUSDT" },
-            { name: "Litecoin", symbol: "LTC", pair: "BINANCE:LTCUSDT" }
-          ].map((coin) => (
-            <div key={coin.symbol} style={{
-              background: "#101935",
-              border: "1px solid rgba(255,255,255,0.15)",
-              borderRadius: "20px",
-              padding: "16px",
-              overflow: "hidden"
-            }}>
-              <h3 style={{ marginBottom: "16px" }}>
-                {coin.name} ({coin.symbol})
-              </h3>
-              <CryptoChart symbol={coin.pair} />
-            </div>
-          ))}
-        </div>
-      </section>
       <section id="tokenomics" className="content-section">
         <div className="section-heading">
           <span className="section-kicker">02 / THE NUMBERS</span>
@@ -239,6 +210,7 @@ export default function Home() {
         </div>
       </section>
 
+      
       <section id="trade" className="content-section trade-section">
         <div className="trade-panel">
           <span className="section-kicker">03 / START EXPLORING</span>
