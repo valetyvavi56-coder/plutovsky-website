@@ -1,5 +1,5 @@
 ﻿"use client";
-
+import CryptoChart from "./CryptoChart";
 import { useState } from "react";
 import "./premium.css";
 
@@ -209,14 +209,7 @@ export default function Home() {
               <h3 style={{ marginBottom: "16px" }}>
                 {coin.name} ({coin.symbol})
               </h3>
-              <iframe
-                title={`${coin.name} Live Chart`}
-                src={`https://s.tradingview.com/widgetembed/?symbol=${encodeURIComponent(coin.pair)}&interval=60&theme=dark&style=1&timezone=Etc%2FUTC`}
-                width="100%"
-                height="360"
-                style={{ border: "none" }}
-                loading="lazy"
-              />
+              <CryptoChart symbol={coin.pair} />
             </div>
           ))}
         </div>
@@ -282,6 +275,8 @@ export default function Home() {
     </main>
   );
 }
+
+
 
 
 
